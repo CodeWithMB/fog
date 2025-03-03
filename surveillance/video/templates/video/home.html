@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Surveillance</title>
+</head>
+<body>
+    <h1>Intelligent Video Surveillance</h1>
+
+    <!-- Buttons to switch between features -->
+    <div class="button-container">
+        <button onclick="window.location.href='{% url 'video_feed' mode='occupancy' %}'">Occupancy Detection</button>
+        <button onclick="window.location.href='{% url 'video_feed' mode='boundary' %}'">Boundary Crossing</button>
+        <button onclick="window.location.href='{% url 'video_feed' mode='people_count' %}'">People Counting</button>
+    </div>
+
+    <!-- Video Stream -->
+    <img src="{% url 'video_feed' mode='face' %}" alt="Live Video Feed" class="video-feed">
+
+    
+</body>
+</html>
