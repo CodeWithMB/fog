@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Surveillance</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 </head>
 <body>
     <h1>Intelligent Video Surveillance</h1>
@@ -16,9 +17,9 @@
         <button onclick="window.location.href='{% url 'video_feed' mode='people_count' %}'">People Counting</button>
     </div>
 
-    <!-- Video Stream -->
-    <img src="{% url 'video_feed' mode='face' %}" alt="Live Video Feed" class="video-feed">
-
-    
+    <!-- Centered Video Stream -->
+    <div class="video-container">
+        <img src="{% url 'video_feed' mode='face' %}" alt="Live Video Feed" class="video-feed">
+    </div>
 </body>
 </html>
